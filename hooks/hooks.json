@@ -1,0 +1,87 @@
+{
+  "hooks": {
+    "BeforeAgent": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${extensionPath}/hooks/agent_status.py"
+          }
+        ]
+      }
+    ],
+    "BeforeModel": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${extensionPath}/hooks/tmux_manager.py"
+          },
+          {
+            "type": "command",
+            "command": "python3 ${extensionPath}/hooks/keyword_detector.py"
+          },
+          {
+            "type": "command",
+            "command": "python3 ${extensionPath}/hooks/intent_gate.py"
+          },
+          {
+            "type": "command",
+            "command": "python3 ${extensionPath}/hooks/model_router.py"
+          }
+        ]
+      }
+    ],
+    "AfterAgent": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${extensionPath}/hooks/todo_enforcer.py"
+          },
+          {
+            "type": "command",
+            "command": "python3 ${extensionPath}/hooks/ralph_loop.py"
+          }
+        ]
+      }
+    ],
+    "BeforeTool": [
+      {
+        "matcher": "replace|write_file",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${extensionPath}/hooks/hashline_wrapper.py"
+          }
+        ]
+      }
+    ],
+    "AfterTool": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${extensionPath}/hooks/output_truncate.py"
+          },
+          {
+            "type": "command",
+            "command": "python3 ${extensionPath}/hooks/hashline_wrapper.py"
+          },
+          {
+            "type": "command",
+            "command": "python3 ${extensionPath}/hooks/edit_error_recovery.py"
+          },
+          {
+            "type": "command",
+            "command": "python3 ${extensionPath}/hooks/json_error_recovery.py"
+          }
+        ]
+      }
+    ]
+  }
+}

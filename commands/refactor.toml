@@ -1,0 +1,11 @@
+description = "Intelligent refactoring with codemap, symbol analysis, and TDD verification."
+prompt = """
+[OMO REFACTOR]:
+1. Use 'map_codebase.py' and 'find_symbols.py' to analyze the target.
+2. Identify dependencies and side effects.
+3. Call Prometheus to plan the refactor.
+4. Execute via Hephaestus with RED -> GREEN -> REFACTOR loop.
+5. Verify with Momus.
+
+Target: {{args}}
+"""

@@ -1,0 +1,10 @@
+description = "Run OMO health diagnostics on the current workspace."
+prompt = """
+[OMO DOCTOR]: Run diagnostics.
+1. Check for 10+ OMO agents. Prefer extension-native agents in ~/.gemini/extensions/oh-my-gem/agents/; fall back to ~/.gemini/agents/.
+2. Check for the 14 core OMO hook scripts. Prefer extension-native hooks in ~/.gemini/extensions/oh-my-gem/hooks/; fall back to ~/.gemini/hooks/ only for legacy/manual installs.
+3. Check hook registration. Treat hooks/hooks.json inside the extension directory as healthy; ~/.gemini/settings.json hook registration is only required for legacy/manual installs.
+4. Verify hashline safety by reading a file.
+5. Report status of tmux session 'oh-my-gem'.
+6. Do not recommend creating ~/.gemini/hooks when extension-native hooks are present and registered via hooks/hooks.json.
+"""

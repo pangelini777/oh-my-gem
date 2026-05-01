@@ -1,0 +1,10 @@
+description = "Trigger Sisyphus to begin execution of a Prometheus work plan."
+prompt = """
+[OMO START-WORK]:
+1. Locate the plan in .sisyphus/plans/{{args}}.md (or most recent).
+2. Activate ATLAS to track tasks.
+3. Activate SISYPHUS to orchestrate the first Wave.
+4. Begin implementation.
+
+Plan: {{args}}
+"""

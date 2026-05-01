@@ -1,0 +1,45 @@
+# Extension policies cannot grant tool access. Gemini CLI ignores extension
+# rules with decision = "allow", so this file only contributes deny rules.
+
+# Deny writing for non-coding agents.
+[[rule]]
+toolName = ["replace", "write_file"]
+subagent = "prometheus"
+decision = "deny"
+priority = 30
+
+[[rule]]
+toolName = ["replace", "write_file"]
+subagent = "metis"
+decision = "deny"
+priority = 30
+
+[[rule]]
+toolName = ["replace", "write_file"]
+subagent = "momus"
+decision = "deny"
+priority = 30
+
+[[rule]]
+toolName = ["replace", "write_file"]
+subagent = "oracle"
+decision = "deny"
+priority = 30
+
+[[rule]]
+toolName = ["replace", "write_file"]
+subagent = "librarian"
+decision = "deny"
+priority = 30
+
+[[rule]]
+toolName = ["replace", "write_file"]
+subagent = "explore"
+decision = "deny"
+priority = 30
+
+[[rule]]
+toolName = ["replace", "write_file"]
+subagent = "atlas"
+decision = "deny"
+priority = 30

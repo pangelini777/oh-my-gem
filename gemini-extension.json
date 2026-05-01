@@ -1,0 +1,24 @@
+{
+  "name": "oh-my-gem",
+  "version": "1.0.5",
+  "description": "High-fidelity port of OMO agent orchestration to Gemini CLI.",
+  "author": "dev",
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "env": {
+        "CONTEXT7_API_KEY": "${CONTEXT7_API_KEY}"
+      },
+      "trust": true
+    },
+    "gh_grep": {
+      "url": "https://mcp.grep.app",
+      "trust": true
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}

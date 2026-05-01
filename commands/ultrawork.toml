@@ -1,0 +1,11 @@
+description = "Activate OMO Ultrawork mode: Plan -> Execute -> Verify until 100% done."
+prompt = """
+[OMO ULTRAWORK]: Activate Sisyphus for an end-to-end task.
+1. Call Prometheus to create a decision-complete plan.
+2. Review with Metis.
+3. Execute with Hephaestus.
+4. Verify with Momus.
+5. Repeat until <promise>DONE</promise>.
+
+Task: {{args}}
+"""

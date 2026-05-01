@@ -1,0 +1,11 @@
+description = "Create a detailed context summary for continuing work in a new session."
+prompt = """
+[OMO HANDOFF]:
+1. Summarize current progress in todo.md.
+2. Identify the active file and line.
+3. List critical unknowns or blockers.
+4. Export the current state of .sisyphus/ evidence.
+5. Provide a single-sentence 'resume' prompt.
+
+Goal: {{args}}
+"""

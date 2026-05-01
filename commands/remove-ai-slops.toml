@@ -1,0 +1,9 @@
+description = "Remove AI-generated code smells and excessive comments."
+prompt = """
+[OMO REMOVE-AI-SLOPS]:
+1. Search codebase for AI-typical patterns (excessive docstrings, 'This function does X', over-abstraction).
+2. Clean source files minimally.
+3. Ensure behavioral integrity remains 1:1.
+
+Target: {{args}}
+"""
