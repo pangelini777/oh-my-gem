@@ -1,8 +1,11 @@
 {
   "name": "oh-my-gem",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "High-fidelity port of OMO agent orchestration to Gemini CLI.",
-  "author": "dev",
+  "author": "Paolo Angelini",
+  "license": "SUL-1.0",
+  "homepage": "https://github.com/pangelini777/oh-my-gem",
+  "sourceUrl": "https://github.com/pangelini777/oh-my-gem",
   "mcpServers": {
     "context7": {
       "command": "npx",
@@ -12,12 +15,10 @@
       ],
       "env": {
         "CONTEXT7_API_KEY": "${CONTEXT7_API_KEY}"
-      },
-      "trust": true
+      }
     },
     "gh_grep": {
-      "url": "https://mcp.grep.app",
-      "trust": true
+      "url": "https://mcp.grep.app"
     }
   },
   "contextFileName": "GEMINI.md"

@@ -5,6 +5,28 @@
 
 ---
 
+## Origin and Attribution
+
+Oh My Gem is a faithful Gemini CLI port of **Oh My OpenAgent / Oh My OpenCode** by YeonGyu Kim.
+
+The goal of this project is to bring the same agent-harness philosophy and workflow model to Gemini CLI, while adapting the implementation to Gemini CLI's different extension architecture.
+
+This repository contains substantial portions adapted from the original project and is therefore distributed under the same Sustainable Use License 1.0 (SUL-1.0).
+
+Full credit for the original concept and core implementation goes to YeonGyu Kim and the Oh My OpenAgent project.
+
+---
+
+## Requirements
+
+- Gemini CLI installed
+- Git installed
+- Python 3 available on PATH
+- Optional: `CONTEXT7_API_KEY` for higher Context7 rate limits
+- Optional: `tmux` for persistent terminal session support
+
+---
+
 ## 🚀 Quick Start
 
 1. **Install Extension**:
@@ -20,8 +42,6 @@
    /ultrawork "implement a new auth system"
    ```
 
-The bundled hooks call `python3`, so Python 3 must be available on your `PATH`.
-
 For local development from a cloned checkout, use:
 
 ```bash
@@ -32,6 +52,14 @@ or install a local copy with:
 
 ```bash
 gemini extensions install .
+```
+
+---
+
+## Uninstall
+
+```bash
+gemini extensions uninstall oh-my-gem
 ```
 
 ---
@@ -66,6 +94,10 @@ Oh My Gem implements the **OMO Hashline Protocol**. Every file read injects cont
 ## 🔐 Policy Notes
 
 Gemini CLI ignores `allow` decisions contributed by extensions. Oh My Gem only ships extension-safe deny rules; if you want permanent allow rules, add them to your user policy files under `~/.gemini/policies/`.
+
+## Security Notes
+
+Oh My Gem installs lifecycle hooks and MCP server configurations. Review `hooks/hooks.json`, `policies/`, and `gemini-extension.json` before installation.
 
 ---
 
